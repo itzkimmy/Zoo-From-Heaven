@@ -1,14 +1,13 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -16,18 +15,7 @@ import java.awt.Dimension;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.EtchedBorder;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.SwingConstants;
-import javax.swing.JRadioButton;
-import javax.swing.JTextField;
-import javax.swing.ButtonGroup;
-import javax.swing.JTextArea;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -68,6 +56,8 @@ public class OrderTicket extends JFrame {
 	 * Create the frame.
 	 */
 	public OrderTicket() {
+		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
+		setIconImage(icon);
 		DecimalFormat f = new DecimalFormat("#0.00");
 		setTitle("Order Ticket");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

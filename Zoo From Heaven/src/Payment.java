@@ -10,10 +10,12 @@ import java.awt.Dimension;
 import javax.swing.border.TitledBorder;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Toolkit;
 
 import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -49,6 +51,8 @@ public class Payment extends JFrame {
 	 */
 	public Payment(String adult, String children,String senior, String citizen, String date, double totalamount) {
 		DecimalFormat f = new DecimalFormat("#0.00");
+		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
+		setIconImage(icon);
 		setBackground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 365);

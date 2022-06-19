@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -14,6 +15,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import java.awt.Font;
+import java.awt.Image;
 
 public class ContactUs extends JFrame {
 
@@ -39,6 +41,8 @@ public class ContactUs extends JFrame {
 	 * Create the frame.
 	 */
 	public ContactUs(String name) {
+		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
+		setIconImage(icon);
 		setUndecorated(true);
 		setBounds(100, 100, 900, 500);
 		contentPane = new JPanel();

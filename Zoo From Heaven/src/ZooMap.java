@@ -39,6 +39,8 @@ public class ZooMap extends JFrame {
 	 * Create the frame.
 	 */
 	public ZooMap(String name) {
+		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
+		setIconImage(icon);
 		setUndecorated(true);
 		setSize(1920,1080);
 		contentPane = new JPanel();

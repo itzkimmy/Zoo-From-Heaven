@@ -48,6 +48,8 @@ public class UserInfo extends JFrame {
 	 * Create the frame.
 	 */
 	public UserInfo() {
+		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
+		setIconImage(icon);
 		setTitle("User Info");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(900, 500);

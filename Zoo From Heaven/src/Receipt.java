@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import java.awt.Color;
@@ -13,6 +14,7 @@ import java.awt.print.PrinterException;
 import java.util.Date;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Toolkit;
 
 public class Receipt extends JFrame {
@@ -39,6 +41,8 @@ public class Receipt extends JFrame {
 	 * Create the frame.
 	 */
 	public Receipt(String adult, String children,String senior, String citizen, String date, double totalamount, String userpay, String change) {
+		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
+		setIconImage(icon);
 		setTitle("RECEIPT");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 650);

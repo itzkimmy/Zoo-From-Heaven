@@ -39,6 +39,8 @@ public class EntranceFee extends JFrame {
 	 * Create the frame.
 	 */
 	public EntranceFee(String name) {
+		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
+		setIconImage(icon);
 		setUndecorated(true);
 		setBounds (0, 0, 900, 500);
 		contentPane = new JPanel();

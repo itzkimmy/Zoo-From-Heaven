@@ -45,6 +45,8 @@ public class Exhibits extends JFrame {
 	 * Create the frame.
 	 */
 	public Exhibits(String name) {
+		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
+		setIconImage(icon);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 1920, 1080);
 		contentPane = new JPanel();

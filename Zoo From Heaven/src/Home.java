@@ -44,6 +44,8 @@ public class Home extends JFrame {
 	 * Create the frame.
 	 */
 	public Home(String name) {
+		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
+		setIconImage(icon);
 		setTitle("Homepage");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 900, 570);
