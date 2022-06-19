@@ -40,12 +40,12 @@ public class Receipt extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Receipt(String adult, String children,String senior, String citizen, String date, double totalamount, String userpay, String change) {
+	public Receipt(String adult, String children,String senior, String citizen, String date, double totalamount, String userpay, String change, String method) {
 		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
 		setIconImage(icon);
 		setTitle("RECEIPT");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 400, 650);
+		setBounds(100, 100, 400, 671);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -56,7 +56,7 @@ public class Receipt extends JFrame {
 		
 		JTextArea textArea = new JTextArea();
 		textArea.setBackground(Color.WHITE);
-		textArea.setBounds(0, 10, 396, 550);
+		textArea.setBounds(0, 10, 396, 571);
 		contentPane.add(textArea);
 		
 		//will show user the receipt
@@ -83,6 +83,7 @@ public class Receipt extends JFrame {
 				textArea.setText(textArea.getText() + "Citizen : " + citizen + "\n\n");
 				textArea.setText(textArea.getText() + "Selected Date : " + date + "\n\n");
 				textArea.setText(textArea.getText() + "----------------------------------------------------------------------------------------------\n\n");
+				textArea.setText(textArea.getText() + "Payment Method : " + method + "\n\n");
 				textArea.setText(textArea.getText() + "Total Amount : RM" + totalamount + "\n\n");
 				textArea.setText(textArea.getText() + "Amount Paid : RM" + userpay + "\n\n");
 				textArea.setText(textArea.getText() + "Change : " + change + "\n\n");
@@ -94,7 +95,7 @@ public class Receipt extends JFrame {
 			}
 		});
 		btngenerate.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		btngenerate.setBounds(10, 570, 192, 33);
+		btngenerate.setBounds(10, 591, 192, 33);
 		contentPane.add(btngenerate);
 		
 		//will print the receipt if user want
@@ -111,7 +112,7 @@ public class Receipt extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setBounds(278, 570, 98, 33);
+		btnNewButton.setBounds(278, 591, 98, 33);
 		contentPane.add(btnNewButton);
 	}
 }
