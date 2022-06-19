@@ -80,21 +80,21 @@ public class Payment extends JFrame {
 		panel_1.add(lblttlpay);
 		
 		//will show total user must pay
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("DEBIT CARD / CREDIT CARD");
-		rdbtnNewRadioButton.addActionListener(new ActionListener() {
+		JRadioButton rdbtnCard = new JRadioButton("DEBIT CARD / CREDIT CARD");
+		rdbtnCard.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(rdbtnNewRadioButton.isSelected())
+				if(rdbtnCard.isSelected())
 				{
 					String total = Double.toString(totalamount);
 					lblttlpay.setText("RM" + total);
 				}
 			}
 		});
-		buttonGroup.add(rdbtnNewRadioButton);
-		rdbtnNewRadioButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		rdbtnNewRadioButton.setBackground(Color.LIGHT_GRAY);
-		rdbtnNewRadioButton.setBounds(6, 22, 261, 50);
-		panel.add(rdbtnNewRadioButton);
+		buttonGroup.add(rdbtnCard);
+		rdbtnCard.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		rdbtnCard.setBackground(Color.LIGHT_GRAY);
+		rdbtnCard.setBounds(6, 22, 261, 50);
+		panel.add(rdbtnCard);
 		
 		
 		//will show total user must pay
@@ -193,6 +193,7 @@ public class Payment extends JFrame {
 				//variable to show at receipt frame
 				String userpay = textuserpay.getText();
 				String change = lblchange.getText();
+				
 				
 				String amountchange = lblchange.getText();
 				

@@ -122,6 +122,7 @@ public class OrderTicket extends JFrame {
 		panel4.setBounds(366, 10, 379, 276);
 		panel3.add(panel4);
 		panel4.setLayout(null);
+		panel4.setVisible(false);
 		
 		JLabel lblcategory1 = new JLabel("Category :");
 		lblcategory1.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -281,11 +282,13 @@ public class OrderTicket extends JFrame {
 					days = "WEEKDAYS";
 					lblselecteddate1.setText("" + days);
 					lbltotalRM1.setText("RM" + f.format(totalamount));
+					panel4.setVisible(true);
 				}
 				else if(((String)comboBoxdate.getSelectedItem()).equals(""))
 				{
 					JOptionPane.showMessageDialog(null, "cant proceed, please select the date");
 					lbltotalRM1.setText(null);
+					panel4.setVisible(false);
 				}
 				else if(((String)comboBoxdate.getSelectedItem()).equals("WEEKEND"))
 				{
@@ -293,6 +296,7 @@ public class OrderTicket extends JFrame {
 					days = "WEEKEND";
 					lblselecteddate1.setText("" + days);
 					lbltotalRM1.setText("RM" + f.format(totalamount));
+					panel4.setVisible(true);
 				}
 				else if(((String)comboBoxdate.getSelectedItem()).equals("SCHOOL HOLIDAYS"))
 				{
@@ -300,6 +304,7 @@ public class OrderTicket extends JFrame {
 					days = "SCHOOL HOLIDAYS";
 					lblselecteddate1.setText("" + days);
 					lbltotalRM1.setText("RM" + f.format(totalamount));
+					panel4.setVisible(true);
 				}	
 				
 			}
@@ -330,6 +335,7 @@ public class OrderTicket extends JFrame {
 				lblcategory4.setText(null);
 				lblselecteddate1.setText(null);
 				lbltotalRM1.setText(null);
+				panel4.setVisible(false);
 			}
 		});
 		btnreset.setBounds(164, 456, 85, 21);
