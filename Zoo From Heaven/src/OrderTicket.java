@@ -38,7 +38,7 @@ public class OrderTicket extends JFrame {
 
 	/**
 	 * Launch the application.
-	 */
+	 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -55,7 +55,7 @@ public class OrderTicket extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public OrderTicket() {
+	public OrderTicket(String name) {
 		Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
 		setIconImage(icon);
 		DecimalFormat f = new DecimalFormat("#0.00");
@@ -359,6 +359,19 @@ public class OrderTicket extends JFrame {
 		});
 		btnnext.setBounds(524, 456, 108, 21);
 		contentPane.add(btnnext);
+		
+		JButton btnNewButton = new JButton("Back");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Home h = new Home(name);
+				h.show();
+				
+				dispose();
+			}
+		});
+		btnNewButton.setBounds(10, 10, 85, 21);
+		contentPane.add(btnNewButton);
 
         Thread clock  = new Thread(){
             public void run(){

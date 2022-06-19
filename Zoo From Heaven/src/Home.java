@@ -81,6 +81,24 @@ public class Home extends JFrame {
 		btnfee.setBounds(10, 0, 126, 44);
 		panel.add(btnfee);
 		
+		//to open zoo map frame
+		JButton btnmap = new JButton("Zoo Map");
+		btnmap.setForeground(Color.WHITE);
+		btnmap.setBorder(null);
+		btnmap.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				ZooMap zm = new ZooMap(name);
+				zm.show();
+				
+				dispose();
+			}
+		});
+		btnmap.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnmap.setBackground(Color.DARK_GRAY);
+		btnmap.setBounds(204, 0, 113, 44);
+		panel.add(btnmap);
+		
 		
 		//to open exhibits frame
 		JButton btnexhibits = new JButton("Exhibits");
@@ -100,43 +118,6 @@ public class Home extends JFrame {
 		btnexhibits.setBounds(390, 0, 110, 44);
 		panel.add(btnexhibits);
 		
-		
-		//to open order ticket frame
-		JButton btnticket = new JButton("Order Ticket");
-		btnticket.setForeground(Color.WHITE);
-		btnticket.setBorder(null);
-		btnticket.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				OrderTicket ot = new OrderTicket();
-				ot.show();
-				
-				dispose();
-			}
-		});
-		btnticket.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnticket.setBackground(Color.DARK_GRAY);
-		btnticket.setBounds(753, 0, 123, 44);
-		panel.add(btnticket);
-		
-		//to open zoo map frame
-		JButton btnmap = new JButton("Zoo Map");
-		btnmap.setForeground(Color.WHITE);
-		btnmap.setBorder(null);
-		btnmap.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				ZooMap zm = new ZooMap(name);
-				zm.show();
-				
-				dispose();
-			}
-		});
-		btnmap.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnmap.setBackground(Color.DARK_GRAY);
-		btnmap.setBounds(204, 0, 113, 44);
-		panel.add(btnmap);
-		
 		//to open contact us frame
 		JButton btncontact = new JButton("Contact Us");
 		btncontact.setBounds(578, 0, 110, 44);
@@ -154,6 +135,25 @@ public class Home extends JFrame {
 		});
 		btncontact.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btncontact.setBackground(Color.DARK_GRAY);
+		
+		
+		//to open order ticket frame
+		JButton btnticket = new JButton("Order Ticket");
+		btnticket.setForeground(Color.WHITE);
+		btnticket.setBorder(null);
+		btnticket.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				OrderTicket ot = new OrderTicket(name);
+				ot.show();
+				
+				dispose();
+			}
+		});
+		btnticket.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnticket.setBackground(Color.DARK_GRAY);
+		btnticket.setBounds(753, 0, 123, 44);
+		panel.add(btnticket);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.LIGHT_GRAY);

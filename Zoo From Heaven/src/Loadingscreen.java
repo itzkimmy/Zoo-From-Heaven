@@ -4,7 +4,7 @@ import javax.swing.ImageIcon;
  
 public class Loadingscreen {
 	
-	Color sem = new Color(38, 70, 83);
+	Color sem = new Color(0, 95, 115);
 	
     JFrame frame;
     JProgressBar progressBar=new JProgressBar();
