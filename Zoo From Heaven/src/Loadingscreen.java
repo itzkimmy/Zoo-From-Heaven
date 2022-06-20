@@ -60,7 +60,7 @@ public class Loadingscreen {
         while( i<=100)
         {
             try{
-                Thread.sleep(50);//Pausing execution for 50 milliseconds
+                Thread.sleep(30);//Pausing execution for 50 milliseconds
                 progressBar.setValue(i);//Setting value of Progress Bar
                 lblloading.setText("Loading Please Wait...");//Setting text of the message JLabel
                 i++;

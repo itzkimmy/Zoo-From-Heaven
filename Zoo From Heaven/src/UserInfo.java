@@ -104,7 +104,7 @@ public class UserInfo extends JFrame {
 		btnlogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				int password = Integer.parseInt(passwordField.getText());
+				float password = Float.parseFloat(passwordField.getText());
 				String name = textusrname.getText(); //username will shown on home frame
 				
 				
